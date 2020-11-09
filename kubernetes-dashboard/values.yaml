@@ -65,7 +65,8 @@ podAnnotations:
   seccomp.security.alpha.kubernetes.io/pod: 'runtime/default'
 
 # Labels to be added to kubernetes dashboard pods
-podLabels: {}
+podLabels: 
+  k8s-app: kubernetes-dashboard
 
 ## Node labels for pod assignment
 ## Ref: https://kubernetes.io/docs/user-guide/node-selection/
@@ -200,7 +201,7 @@ pinnedCRDs: []
 ## Container to scrape, store, and retrieve a window of time from the Metrics Server.
 ## refs: https://github.com/kubernetes-sigs/dashboard-metrics-scraper
 metricsScraper:
-  enabled: false
+  enabled: true
   image:
     repository: kubernetesui/metrics-scraper
     tag: v1.0.6
@@ -253,7 +254,7 @@ serviceAccount:
   create: true
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name:
+  name: kubernetes-dashboard
 
 livenessProbe:
   # Number of seconds to wait before sending first probe
