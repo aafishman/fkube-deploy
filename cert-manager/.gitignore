@@ -1,5 +1,3 @@
 *.tgz
 charts/*
 requirements.lock
-letsencrypt-production.yaml
-letsencrypt-staging.yaml
