@@ -3,8 +3,8 @@
 ##
 controller:
   image:
-    repository: arm32v6/nginx
-    tag: 1.18-alpine-perl
+    repository: quay.io/kubernetes-ingress-controller/nginx-ingress-controller-arm
+    tag: 0.32.0 
     # digest: sha256:1f4f402b9c14f3ae92b11ada1dfe9893a88f0faeb0b2f4b903e2c67a0c3bf0de
     pullPolicy: IfNotPresent
     # www-data -> uid 101
